@@ -2,7 +2,7 @@
 # README for Atlas T2 Docker project #3001
 
 ## For Peer Reviewer
-    please see included project task notes below, for explanations of my solution implementation to take into consideration when evaluating and scoring. Thank you!
+please see included project task notes below, for explanations of my solution implementation to take into consideration when evaluating and scoring. Thank you!
 
 ## Introduction
 This repository contains Docker-related projects to practice and learn about containerization, Docker basics, and microservices architecture. Docker is a powerful tool that allows developers to package applications into containers—standalone executable packages that include everything needed to run the application, including the code, runtime, system tools, system libraries, and settings.
