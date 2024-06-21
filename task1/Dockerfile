@@ -26,14 +26,3 @@ EXPOSE 5252
 
 # run flask on exposed port
 CMD ["python3", "app/api.py"]
-
-
-
-
-
-
-# Make the entrypoint script executable
-RUN chmod +x /task0/entrypoint.sh
-
-# Run the entrypoint script when the container starts
-ENTRYPOINT ["/task0/entrypoint.sh"]
