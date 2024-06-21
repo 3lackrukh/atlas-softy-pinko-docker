@@ -1,10 +1,12 @@
+# README for Atlas T2 Docker project #3001
 
-# Student Docker Practice Files
+## For Peer Reviewer
+please see included project task notes below, for explanations of my solution implementation to take into consideration when evaluating and scoring. Thank you!
 
 ## Introduction
-This repository contains Docker-related projects aimed at students to practice and learn about containerization, Docker basics, and microservices architecture. Docker is a powerful tool that allows developers to package applications into containers—standalone executable packages that include everything needed to run the application, including the code, runtime, system tools, system libraries, and settings.
+This repository contains Docker-related projects to practice and learn about containerization, Docker basics, and microservices architecture. Docker is a powerful tool that allows developers to package applications into containers—standalone executable packages that include everything needed to run the application, including the code, runtime, system tools, system libraries, and settings.
 
-In this project, you will explore Docker by setting up a simple yet comprehensive infrastructure for an application. This includes understanding and implementing a reverse proxy, load balancing, and managing multiple services within Docker containers.
+In this project, I will explore Docker by setting up a simple yet comprehensive infrastructure for an application. This includes understanding and implementing a reverse proxy, load balancing, and managing multiple services within Docker containers.
 
 ## High-Level Design
 The project involves designing and deploying a multi-service application architecture using Docker. The setup includes:
@@ -23,24 +25,21 @@ Traffic routing and load balancing are managed through a round-robin algorithm, 
 ### Task 0: Create Your First Docker Image
 Create a Docker image based on the latest Ubuntu, update APT, and upgrade all installed software. The Docker image should, upon execution, echo "Hello, World!" in the terminal.
 
-- In my implementation I have added:
-    -- Cleanup and removal after installation:
-        - to reduce the size of the Docker image
-        - allowing for faster deployment
+#### In my implementation I have added
+- Cleanup and removal after installation
+    - to reduce the size of the Docker image
+    - allowing for faster deployment
 
-    -- Specify working directory:
-        - to exercise readability best practices
-        - to exercise maintainability best practices
-            for larger projects
+- Specify working directory
+    - to exercise readability best practices
+    - to exercise maintainability best practices for larger projects
 
-    -- Entry Point script:
-        - though not demonstrated in the example,
-            there is not another way to achieve the
-            desired functionality: 
-            echo "Hello, World!"
+- Entry Point script
+    - though not demonstrated in the project example, there is not another way to achieve the desired functionality
+        echo "Hello, World!"
 
-    -- Copying and changing mode for an entrypoint file
-        - to exercise best practices for larger projects
+- Copying and changing mode for an entrypoint file
+    - to exercise best practices for larger projects
 
 ### Task 1: Back-end
 Develop a backend service using Python3, Flask, and Docker. Ensure your Dockerfile is set up to handle Python dependencies via pip.
@@ -63,3 +62,7 @@ Scale your application horizontally by adding multiple instances of your API ser
 ## Repository Details
 - **GitHub Repository**: atlas-softy-pinko-docker
 - **Directory Structure**: Each task will have its own directory under the root of the repository.
+
+---
+
+By aligning the text with the rest of the document, you can avoid unintentional code block formatting in your Markdown documents.
