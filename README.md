@@ -27,20 +27,20 @@ Traffic routing and load balancing are managed through a round-robin algorithm, 
 Create a Docker image based on the latest Ubuntu, update APT, and upgrade all installed software. The Docker image should, upon execution, echo "Hello, World!" in the terminal.
 
 #### In my implementation I have added:
-    - Cleanup and removal after installation:
-        -- to reduce the size of the Docker image
-        -- allowing for faster deployment
+    -- Cleanup and removal after installation:
+        - to reduce the size of the Docker image
+        - allowing for faster deployment
 
-    - Specify working directory:
-        -- to exercise readability best practices
-        -- to exercise maintainability best practices for larger projects
+    -- Specify working directory:
+        - to exercise readability best practices
+        - to exercise maintainability best practices for larger projects
 
-    - Entry Point script:
-        -- though not demonstrated in the project example, there is not another way to achieve the desired functionality: 
+    -- Entry Point script:
+        - though not demonstrated in the project example, there is not another way to achieve the desired functionality: 
             echo "Hello, World!"
 
-    - Copying and changing mode for an entrypoint file
-        -- to exercise best practices for larger projects
+    -- Copying and changing mode for an entrypoint file
+        - to exercise best practices for larger projects
 
 ### Task 1: Back-end
 Develop a backend service using Python3, Flask, and Docker. Ensure your Dockerfile is set up to handle Python dependencies via pip.
