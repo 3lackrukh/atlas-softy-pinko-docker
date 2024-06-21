@@ -25,4 +25,4 @@ RUN pip3 install flask
 EXPOSE 5252
 
 # run flask on exposed port
-CMD ["python3", "app/api.py"]
+CMD ["python3", "/app/api.py"]
