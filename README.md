@@ -26,7 +26,7 @@ Traffic routing and load balancing are managed through a round-robin algorithm, 
 ### Task 0: Create Your First Docker Image
 Create a Docker image based on the latest Ubuntu, update APT, and upgrade all installed software. The Docker image should, upon execution, echo "Hello, World!" in the terminal.
 
-####In my implementation I have added:
+#### In my implementation I have added:
     - Cleanup and removal after installation:
         -- to reduce the size of the Docker image
         -- allowing for faster deployment
