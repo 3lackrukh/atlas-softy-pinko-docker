@@ -2,8 +2,8 @@
 FROM ubuntu:latest
 
 # Update APT and upgrade all existing packages
-RUN apt-get update && \
-    apt-get upgrade -y
+RUN apt-get update
+RUN apt-get upgrade -y
 
 # Remove unnecessary files after installation
 RUN apt-get clean && \
@@ -13,7 +13,7 @@ RUN apt-get clean && \
 WORKDIR /task0
 
 # Copy the entrypoint script into the container
-COPY./entrypoint.sh /task0/entrypoint.sh
+COPY ./entrypoint.sh /task0/entrypoint.sh
 
 # Make the entrypoint script executable
 RUN chmod +x /task0/entrypoint.sh
