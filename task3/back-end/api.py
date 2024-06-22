@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 from flask import Flask
+from flask import CORS
 
 app = Flask(__name__)
 

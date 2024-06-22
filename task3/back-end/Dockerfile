@@ -18,8 +18,9 @@ WORKDIR /app
 # Copy the api file into the container
 COPY api.py /app/api.py
 
-# Use pip to install flask
+# Use pip to install flask and flask-cors
 RUN pip3 install flask
+RUN pip3 install flask-cors
 
 # Expose port for flask
 EXPOSE 5252
