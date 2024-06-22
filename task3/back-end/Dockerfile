@@ -5,6 +5,10 @@ FROM ubuntu:22.04
 RUN apt-get update
 RUN apt-get upgrade -y
 
+# Clean-up
+RUN apt-get autoremove -y && \
+    apt-get autoclean -y
+
 # Install python3 and pip
 RUN apt-get install -y python3 python3-pip
 
@@ -19,8 +23,7 @@ WORKDIR /app
 COPY api.py /app/api.py
 
 # Use pip to install flask and flask-cors
-RUN pip3 install flask
-RUN pip3 install flask-cors
+RUN pip3 install flask flask-cors
 
 # Expose port for flask
 EXPOSE 5252
