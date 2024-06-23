@@ -1,6 +1,3 @@
-# Specify docker-compose file format
-version: '3.8'
-
 # Define container components of the application
 services:
 
@@ -8,7 +5,7 @@ services:
     build:
       # From which folder and which file 
       context: ./back-end
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     # Name and tag the image
     image: softy-pinko-back-end:task4
     # Map service port to host port
@@ -19,7 +16,7 @@ services:
     build:
       # From which folder and which file
       context: ./front-end
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     # Name and tag the image
     image: softy-pinko-front-end:task4
     # Map service port to host port
