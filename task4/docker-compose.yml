@@ -1,0 +1,30 @@
+# Specify docker-compose file format
+version: '3.8'
+
+# Define container components of the application
+services:
+
+  back-end:
+    build:
+      # From which folder and which file 
+      context: ./back-end
+      dockerfile: dockerfile
+    # Name and tag the image
+    image: softy-pinko-back-end:task4
+    # Map service port to host port
+    ports:
+      - "5252:5252"
+
+  front-end:
+    build:
+      # From which folder and which file
+      context: ./front-end
+      dockerfile: dockerfile
+    # Name and tag the image
+    image: softy-pinko-front-end:task4
+    # Map service port to host port
+    ports:
+      - "9000:9000"
+    # Wait for back-end to start
+    depends_on:
+      - back-end
