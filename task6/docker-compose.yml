@@ -1,0 +1,38 @@
+# Define container components of the application
+services:
+
+  back-end:
+    build:
+      # From which folder and which file 
+      context: ./back-end
+      dockerfile: Dockerfile
+    # Name and tag the image
+    image: softy-pinko-back-end:task5
+
+
+  front-end:
+    build:
+      # From which folder and which file
+      context: ./front-end
+      dockerfile: Dockerfile
+    # Name and tag the image
+    image: softy-pinko-front-end:task5
+    # Wait for back-end to start
+    depends_on:
+      - back-end
+
+  proxy:
+    build:
+      # From which folder and which file
+      context: ./proxy
+      dockerfile: Dockerfile
+    # Name and tag the image
+    image: softy-pinko-proxy:task5
+    # Map service port to host port
+    ports:
+      - "80:80"
+    # Wait for back-end and front-end to start
+    depends_on:
+      - back-end
+      - front-end
+
