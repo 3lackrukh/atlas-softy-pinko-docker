@@ -8,9 +8,7 @@ services:
       dockerfile: Dockerfile
     # Name and tag the image
     image: softy-pinko-back-end:task5
-    # Map service port to host port
-    ports:
-      - "5252:5252"
+
 
   front-end:
     build:
@@ -19,9 +17,6 @@ services:
       dockerfile: Dockerfile
     # Name and tag the image
     image: softy-pinko-front-end:task5
-    # Map service port to host port
-    ports:
-      - "9000:9000"
     # Wait for back-end to start
     depends_on:
       - back-end
