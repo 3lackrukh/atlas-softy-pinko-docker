@@ -1,5 +1,5 @@
 # Host from nginx web-server
-FROM ngnix:latest
+FROM nginx:latest
 
 # Copy config file to nginx config folder as default
 COPY ./proxy.conf /etc/nginx/conf.d/default.conf
